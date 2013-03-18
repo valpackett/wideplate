@@ -1,9 +1,9 @@
-$.fn.extend({
+jQuery.fn.extend({
   widthfix: function() {
     return this.each(function() {
-      var $this = $(this);
+      var $this = jQuery(this);
       $this.css('width', 'auto');
-      var winhei = $(window).height();
+      var winhei = jQuery(window).height();
       while ($this.height() > winhei) {
         $this.css('width', $this.width()*1.2);
       }
