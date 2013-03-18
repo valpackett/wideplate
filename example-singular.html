@@ -55,7 +55,7 @@
         $('p').hyphenate('en-us');
 
         $('.singular').widthfix();
-        $(window).resize(function() {
+        $(window).on('resize orientationchange', function() {
           $('.singular').widthfix();
         });
         
