@@ -1,3 +1,12 @@
+/*!
+ * WIDEPLATE -- https://github.com/myfreeweb/wideplate
+ */
+
+$singular-column-width: 22em;
+$plural-column-max-width: 22em;
+$column-rule: 1px dotted #ccc;
+$column-gap: 1px;
+
 @mixin column-width($w) {
   -webkit-column-width: $w;
   -moz-column-width: $w;
@@ -27,13 +36,31 @@
   column-break-inside: $w;
 }
 
+@mixin hyphens($w) {
+  -webkit-hyphens: $w;
+  -moz-hyphens: $w;
+  -ms-hyphens: $w;
+  hyphens: $w;
+}
+
+@mixin box-sizing($w) {
+  -webkit-box-sizing: $w;
+  -moz-box-sizing: $w;
+  box-sizing: $w;
+}
+
+@mixin overflow-scrolling($w) {
+  -webkit-overflow-scrolling: $w;
+  overflow-scrolling: $w;
+}
+
 html { height: 100%; }
 body { height: 100%; position: relative; }
 
 .singular, .plural {
   text-align: justify;
-  -moz-hyphens: auto;
-  hyphens: auto;
+  @include hyphens(auto);
+  @include overflow-scrolling(touch);
   h1, h2, h3, h4, h5, h6 {
     text-align: left;
   }
@@ -41,13 +68,13 @@ body { height: 100%; position: relative; }
 
 .singular {
   position: relative;
-  height: 92%;
-  margin-top: 3%;
+  height: 95%;
+  margin-top: 1.5%;
   display: inline-block;
-  @include column-width(22em);
-  @include column-gap(1px);
+  @include column-width($singular-column-width);
+  @include column-gap($column-gap);
   @include column-fill(auto);
-  @include column-rule(1px dotted #ccc);
+  @include column-rule($column-rule);
   h1, h2, h3, h4, h5, h6, figure {
     @include column-break-inside(avoid);
   }
@@ -57,7 +84,7 @@ body { height: 100%; position: relative; }
   position: relative;
   width: 100%;
   height: 100%;
-  white-space: nowrap;
+  white-space: nowrap; // <---- THIS makes them stack
   & > section {
     position: relative;
     white-space: normal;
@@ -65,21 +92,13 @@ body { height: 100%; position: relative; }
     vertical-align: top;
     width: 100%;
     height: 100%;
-    max-width: 22em;
+    max-width: $plural-column-max-width;
     overflow: hidden;
     overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    overflow-scrolling: touch;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border-right: 1px dotted #ccc;
-    margin-left: 1px;
+    @include box-sizing(border-box);
+    border-right: $column-rule;
+    margin-left: $column-gap;
   }
-}
-
-@media screen and (max-height: 700px) {
-  .singular { height: 90vh; }
 }
 
 @media screen and (max-width: 32em) {

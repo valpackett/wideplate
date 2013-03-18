@@ -1,3 +1,6 @@
+/*
+ * WIDEPLATE -- https://github.com/myfreeweb/wideplate
+ */
 html {
   height: 100%; }
 
@@ -7,15 +10,19 @@ body {
 
 .singular, .plural {
   text-align: justify;
+  -webkit-hyphens: auto;
   -moz-hyphens: auto;
-  hyphens: auto; }
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch; }
   .singular h1, .singular h2, .singular h3, .singular h4, .singular h5, .singular h6, .plural h1, .plural h2, .plural h3, .plural h4, .plural h5, .plural h6 {
     text-align: left; }
 
 .singular {
   position: relative;
-  height: 92%;
-  margin-top: 3%;
+  height: 95%;
+  margin-top: 1.5%;
   display: inline-block;
   -webkit-column-width: 22em;
   -moz-column-width: 22em;
@@ -48,17 +55,12 @@ body {
     max-width: 22em;
     overflow: hidden;
     overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    overflow-scrolling: touch;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border-right: 1px dotted #cccccc;
     margin-left: 1px; }
 
-@media screen and (max-height: 700px) {
-  .singular {
-    height: 90vh; } }
 @media screen and (max-width: 32em) {
   .singular.narrow-collapse {
     height: auto; }
