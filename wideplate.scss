@@ -58,7 +58,7 @@ body { height: 100%; position: relative; }
   position: relative;
   height: 95%;
   margin-top: 1.5%;
-  display: inline-block;
+  display: block;
   @include column-width($singular-column-width);
   @include column-gap($column-gap);
   @include column-fill(auto);
