@@ -17,9 +17,9 @@ body {
   height: 95%;
   margin-top: 1.5%;
   display: block;
-  -webkit-column-width: 24em;
-  -moz-column-width: 24em;
-  column-width: 24em;
+  -webkit-column-width: 22em;
+  -moz-column-width: 22em;
+  column-width: 22em;
   -webkit-column-gap: 1px;
   -moz-column-gap: 1px;
   column-gap: 1px;
@@ -45,7 +45,7 @@ body {
     vertical-align: top;
     width: 100%;
     height: 100%;
-    max-width: 26em;
+    max-width: 24em;
     overflow: hidden;
     overflow-y: auto;
     -webkit-box-sizing: border-box;
