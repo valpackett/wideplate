@@ -53,3 +53,4 @@ ul { list-style-type: square; list-style-position: inside; padding-left: 0; }
 footer { text-align: center; }
 pre code { font-size: 90%; }
 code { font-family: Monaco, monospace; }
+.wider { min-width: 36em; max-width: 38em; }
