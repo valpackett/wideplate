@@ -8,8 +8,11 @@ body {
   -ms-text-size-adjust:100%;
   background: #fafafa;
   color: #343434;
+  text-align: justify;
 }
-p { margin: 1.5em 0; }
+a { color: #268bd2; }
+a:hover, a:focus { color: #2995fd; }
+p, ul { margin: 1.5em 0; }
 .singular p, .singular h1, .singular h2 {
   padding: 0 1em;
   padding: 0 1rem;
@@ -17,10 +20,36 @@ p { margin: 1.5em 0; }
 .plural > section {
   padding: 1em;
 }
-h1, h2 {
+h1, h2, .btn {
   font-family: "HelveticaNeue-CondensedBold", sans-serif;
   font-weight: bold;
   color: #232323;
+  text-align: left;
 }
 h1 { font-size: 2em; line-height: 1.15em; margin-top: 0.75em; margin-bottom: 0.75em; }
 h2 { font-size: 1.5em; line-height: 1.4em; margin-top: 1em; margin-bottom: 1em; }
+
+/* Home page style */
+a.btn {
+  display: block;
+  border-radius: 4px;
+  padding: 0.8em 0.4em;
+  text-align: center;
+  text-decoration: none;
+  color: #fdf6e3;
+  font-size: 1.5em;
+  margin: 0 0 0.5em;
+}
+a.btn small { display: block; font-size: 85%; margin-top: 0.4em; }
+#github { background: #2aa198; }
+#github:hover, #github:focus { background: #2fb8a9; }
+#getcss { background: #6c71c4; }
+#getcss:hover, #getcss:focus { background: #8288ec; }
+#getscss { background: #859900; }
+#getscss:hover, #getscss:focus { background: #a1c107; }
+#getjs { background: #dc322f; }
+#getjs:hover, #getjs:focus { background: #ff262c; }
+ul { list-style-type: square; list-style-position: inside; padding-left: 0; }
+footer { text-align: center; }
+pre code { font-size: 90%; }
+code { font-family: Monaco, monospace; }

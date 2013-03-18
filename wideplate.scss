@@ -2,8 +2,8 @@
  * WIDEPLATE -- https://github.com/myfreeweb/wideplate
  */
 
-$singular-column-width: 20em;
-$plural-column-max-width: 22em;
+$singular-column-width: 24em;
+$plural-column-max-width: 26em;
 $column-rule: 1px dotted #ccc;
 $column-gap: 1px;
 
@@ -36,13 +36,6 @@ $column-gap: 1px;
   column-break-inside: $w;
 }
 
-@mixin hyphens($w) {
-  -webkit-hyphens: $w;
-  -moz-hyphens: $w;
-  -ms-hyphens: $w;
-  hyphens: $w;
-}
-
 @mixin box-sizing($w) {
   -webkit-box-sizing: $w;
   -moz-box-sizing: $w;
@@ -58,12 +51,7 @@ html { height: 100%; }
 body { height: 100%; position: relative; }
 
 .singular, .plural {
-  text-align: justify;
-  @include hyphens(auto);
   @include overflow-scrolling(touch);
-  h1, h2, h3, h4, h5, h6 {
-    text-align: left;
-  }
 }
 
 .singular {

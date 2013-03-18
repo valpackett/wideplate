@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width, initial-scale=1.0">
+    <title>Wideplate</title>
+    <link rel=stylesheet href=wideplate.css>
+    <link rel=stylesheet href=prism.css>
+    <link rel=stylesheet href=example.css>
+  </head>
+  <body class=plural>
+    <section>
+      <h1>Wideplate</h1>
+      <h2>A multi-column responsive/adaptive CSS layout starter kit.</h2>
+      <p>
+        Wideplate doesn't make any choices about design or typography.
+        It's a simple implementation of two layouts that look good on any screen, from an iPhone to a widescreen HDTV &mdash; Singular and Plural.
+      </p>
+      <a id=github  class=btn href="https://github.com/myfreeweb/wideplate">Watch on GitHub</a>
+      <a id=getcss  class=btn href="wideplate.css">Download CSS</a>
+      <a id=getscss class=btn href="wideplate.scss">Download SCSS</a>
+      <a id=getjs   class=btn href="jquery.wideplate.js">
+        Download jQuery Plugin
+        <small>(for Singular layout)</small>
+      </a>
+      <footer>
+        a { <a href="http://floatboth.com">float: both</a> } production
+      </footer>
+    </section>
+    <section>
+      <h2>Singular Layout</h2>
+      <p>A horizontal layout for things like articles, inspired by <a href="http://kaikkonendesign.fi/columns/">Typesetting Responsive CSS3 columns</a>.</p>
+      <p>
+        <a href="example-singular.html">See an example &rarr;</a>
+      </p>
+      <pre><code class=language-markup>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta name="viewport"
+          content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Article&lt;/title&gt;
+    &lt;link rel="stylesheet"
+          href="wideplate.css"&gt;
+  &lt;/head&gt;
+  &lt;body class="singular"&gt;
+    &lt;h1&gt;Article Header&lt;/h1&gt;
+    &lt;p&gt;Text text text text&lt;/p&gt;
+    &lt;p&gt;Text text text text&lt;/p&gt;
+    &lt;p&gt;Text text text text&lt;/p&gt;
+    &lt;p&gt;Text text text text&lt;/p&gt;
+    &lt;script src="jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script src="jquery.wideplate.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+      $(document).ready(function() {
+        $('.singular').widthfix();
+        $(window).resize(function() {
+          $('.singular').widthfix();
+        });
+      });
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </section>
+    <section>
+      <h2>Plural Layout</h2>
+      <p>A bidirectional layout for things like home pages, inspired by <a href="http://jonikorpi.com">jonikorpi.com</a>.</p>
+      <p>
+        <a href="example-plural.html">See an example &rarr;</a><br>
+        (or just look at this page)
+      </p>
+      <pre><code class=language-markup>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta name="viewport"
+          content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Home page&lt;/title&gt;
+    &lt;link rel="stylesheet"
+          href="wideplate.css"&gt;
+  &lt;/head&gt;
+  &lt;body class="plural"&gt;
+    &lt;section&gt;
+      &lt;h1&gt;Hello World&lt;/h1&gt;
+      &lt;p&gt;Text text text&lt;/p&gt;
+      &lt;p&gt;Text text text&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+      &lt;p&gt;Text text text&lt;/p&gt;
+      &lt;p&gt;Text text text&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </section>
+    <section>
+      <h2>Recommended Tools</h2>
+      <ul>
+        <li><a href="http://necolas.github.com/normalize.css/">Normalize.css</a>, the thing to use instead of a reset to normalize defaults across browsers.</li>
+        <li><a href="http://typeplate.com/">Typeplate</a>, a starter kit for typography. Combine Normalize, Typeplate and Wideplate for a great starting template.</li>
+        <li><a href="https://github.com/bramstein/hypher">Hypher.js</a>, a cross-browser hyphenation library.</li>
+      </ul>
+      <h2>Notes</h2>
+      <ul>
+        <li>You can use a container block instead of the body, like in the code examples.</li>
+        <li>You can add the <code>narrow-collapse</code> class to <code>singular</code> or <code>plural</code> to make the layout collapse to one column on narrow screens (like smartphones.)</li>
+        <li>The Plural layout works great with a touch screen or a multi-touch trackpad (like on a MacBook), but not as good with a mouse. If your readers are developers and designers with MacBooks, feel free to use it. Otherwise, you might want to wait a few years ;-)</li>
+      </ul>
+    </section>
+    <script src=jquery.min.js></script>
+    <script src=jquery.hypher.min.js></script>
+    <script src=en-us.js></script>
+    <script src=prism.js></script>
+    <script>
+      $(document).ready(function() {
+        $('p').hyphenate('en-us');
+      });
+    </script>
+  </body>
+</html>
