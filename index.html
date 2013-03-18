@@ -5,7 +5,7 @@
     <meta name=viewport content="width=device-width, initial-scale=1.0">
     <title>Wideplate</title>
     <link rel=stylesheet href=wideplate.css>
-    <link rel=stylesheet href=prism.css>
+    <link rel=stylesheet href="vendor/prism.css">
     <link rel=stylesheet href=example.css>
   </head>
   <body class=plural>
@@ -104,10 +104,10 @@
         <li>The Plural layout works great with a touch screen or a multi-touch trackpad (like on a MacBook), but not as good with a mouse. If your readers are developers and designers with MacBooks, feel free to use it. Otherwise, you might want to wait a few years ;-)</li>
       </ul>
     </section>
-    <script src=jquery.min.js></script>
-    <script src=jquery.hypher.min.js></script>
-    <script src=en-us.js></script>
-    <script src=prism.js></script>
+    <script src="vendor/jquery.min.js"></script>
+    <script src="vendor/jquery.hypher.min.js"></script>
+    <script src="vendor/en-us.js"></script>
+    <script src="vendor/prism.js"></script>
     <script>
       $(document).ready(function() {
         $('p').hyphenate('en-us');
