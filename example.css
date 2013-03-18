@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 100%;
+  line-height: 1.5em;
+  -webkit-text-size-adjust:100%;
+  -ms-text-size-adjust:100%;
+}
+p { margin: 1.5em 0; }
+.singular p, .singular h1, .singular h2 {
+  padding: 0 1em;
+  padding: 0 1rem;
+}
+.plural > section {
+  padding: 1em;
+}
+h1, h2 {
+  font-family: "HelveticaNeue-CondensedBold", sans-serif;
+  font-weight: bold;
+}
+h1 { font-size: 2em; line-height: 1.15em; margin-top: 0.75em; margin-bottom: 0.75em; }
+h2 { font-size: 1.5em; line-height: 1.4em; margin-top: 1em; margin-bottom: 1em; }

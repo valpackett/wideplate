@@ -1,0 +1,96 @@
+@mixin column-width($w) {
+  -webkit-column-width: $w;
+  -moz-column-width: $w;
+  column-width: $w;
+}
+
+@mixin column-gap($w) {
+  -webkit-column-gap: $w;
+  -moz-column-gap: $w;
+  column-gap: $w;
+}
+
+@mixin column-fill($w) {
+  -webkit-column-fill: $w;
+  -moz-column-fill: $w;
+  column-fill: $w;
+}
+
+@mixin column-rule($w) {
+  -webkit-column-rule: $w;
+  -moz-column-rule: $w;
+  column-rule: $w;
+}
+
+@mixin column-break-inside($w) {
+  -webkit-column-break-inside: $w;
+  column-break-inside: $w;
+}
+
+html { height: 100%; }
+body { height: 100%; position: relative; }
+
+.singular, .plural {
+  text-align: justify;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+  }
+}
+
+.singular {
+  position: relative;
+  height: 92%;
+  margin-top: 3%;
+  display: inline-block;
+  @include column-width(22em);
+  @include column-gap(1px);
+  @include column-fill(auto);
+  @include column-rule(1px dotted #ccc);
+  h1, h2, h3, h4, h5, h6, figure {
+    @include column-break-inside(avoid);
+  }
+}
+
+.plural {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  & > section {
+    position: relative;
+    white-space: normal;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    max-width: 22em;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-right: 1px dotted #ccc;
+    margin-left: 1px;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .singular { height: 90vh; }
+}
+
+@media screen and (max-width: 32em) {
+  .singular.narrow-collapse { height: auto; }
+  .plural.narrow-collapse {
+    white-space: normal;
+    & > section {
+      height: auto;
+      max-width: 100%;
+      margin-left: 0;
+      border-right: 0;
+    }
+  }
+}
