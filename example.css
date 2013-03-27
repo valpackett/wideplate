@@ -21,8 +21,9 @@ p, ul { margin: 1.5em 0; }
   padding: 1em;
 }
 h1, h2, .btn {
-  font-family: "HelveticaNeue-CondensedBold", sans-serif;
-  font-weight: bold;
+  font-family: "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+  font-weight: 600;
+  font-stretch: condensed;
   color: #232323;
   text-align: left;
 }
