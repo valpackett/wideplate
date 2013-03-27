@@ -51,7 +51,7 @@ a.btn small { display: block; font-size: 85%; margin-top: 0.4em; }
 #getjs:hover, #getjs:focus { background: #ff262c; }
 ul { list-style-type: square; list-style-position: inside; padding-left: 0; }
 footer { text-align: center; }
-pre[class*="language-"] { white-space: pre-wrap; }
+pre[class*="language-"], code[class*="language-"] { white-space: pre-wrap; }
 pre code { font-size: 90%; }
 code { font-family: Monaco, monospace; }
 .wider { min-width: 36em; max-width: 38em; }
