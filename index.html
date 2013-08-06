@@ -42,12 +42,14 @@
     &lt;link rel="stylesheet"
           href="wideplate.css"&gt;
   &lt;/head&gt;
-  &lt;body class="singular"&gt;
-    &lt;h1&gt;Article Header&lt;/h1&gt;
-    &lt;p&gt;Text text text text&lt;/p&gt;
-    &lt;p&gt;Text text text text&lt;/p&gt;
-    &lt;p&gt;Text text text text&lt;/p&gt;
-    &lt;p&gt;Text text text text&lt;/p&gt;
+  &lt;body class="singular-wrapper"&gt;
+    &lt;div class="singular"&gt;
+      &lt;h1&gt;Article Header&lt;/h1&gt;
+      &lt;p&gt;Text text text text&lt;/p&gt;
+      &lt;p&gt;Text text text text&lt;/p&gt;
+      &lt;p&gt;Text text text text&lt;/p&gt;
+      &lt;p&gt;Text text text text&lt;/p&gt;
+    &lt;/div&gt;
     &lt;script src="jquery.min.js"&gt;&lt;/script&gt;
     &lt;script src="jquery.wideplate.js"&gt;&lt;/script&gt;
     &lt;script&gt;
@@ -101,7 +103,6 @@
       </ul>
       <h2>Notes</h2>
       <ul>
-        <li>You can use a container block instead of the body, like in the code examples.</li>
         <li>You can add the <code>narrow-collapse</code> class to <code>singular</code> or <code>plural</code> to make the layout collapse to one column on narrow screens (like smartphones.)</li>
         <li>The Plural layout works great with a touch screen or a multi-touch trackpad (like on a MacBook), but not as good with a mouse. If your readers are developers and designers with MacBooks, feel free to use it. Otherwise, you might want to wait a few years ;-)</li>
       </ul>

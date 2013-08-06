@@ -54,11 +54,19 @@ body { height: 100%; position: relative; }
   @include overflow-scrolling(touch);
 }
 
+.singular-wrapper {
+  position: absolute;
+  white-space: nowrap;
+}
+
 .singular {
-  position: relative;
-  height: 95%;
-  margin-top: 1.5%;
-  display: block;
+  max-height: 99%;
+  max-height: 99vh;
+  padding: 1em 0;
+  padding: 3vh 0;
+  display: inline-block;
+  @include box-sizing(border-box);
+  white-space: normal;
   @include column-width($singular-column-width);
   @include column-gap($column-gap);
   @include column-fill(auto);
@@ -90,7 +98,10 @@ body { height: 100%; position: relative; }
 }
 
 @media screen and (max-width: 32em) {
-  .singular.narrow-collapse { height: auto; }
+  .singular.narrow-collapse {
+    max-height: none !important;
+    width: auto !important;
+  }
   .plural.narrow-collapse {
     white-space: normal;
     & > section {

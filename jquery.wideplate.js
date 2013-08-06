@@ -3,9 +3,11 @@ jQuery.fn.extend({
     return this.each(function() {
       var $this = jQuery(this);
       $this.css('width', 'auto');
-      var winhei = jQuery(window).height();
-      while ($this.height() > winhei) {
-        $this.css('width', $this.width()*1.2);
+      if (!$this.hasClass('narrow-collapse') || typeof matchMedia == 'undefined' || matchMedia('screen and (max-width: 32em)').matches) {
+        var aid = jQuery('<div>').css('height', '0px').appendTo($this);
+        var winhei = jQuery(window).height();
+        $this.css('width', aid.position().left);
+        aid.detach();
       }
     });
   }
