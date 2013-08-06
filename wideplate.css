@@ -21,10 +21,8 @@ body {
 }
 
 .singular {
-  max-height: 99%;
-  max-height: 99vh;
+  max-height: 100%;
   padding: 1em 0;
-  padding: 3vh 0;
   display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -72,6 +70,10 @@ body {
 }
 
 @media screen and (max-width: 32em) {
+  html {
+    min-width: auto !important;
+  }
+
   .singular.narrow-collapse {
     max-height: none !important;
     width: auto !important;
@@ -85,5 +87,10 @@ body {
     max-width: 100%;
     margin-left: 0;
     border-right: 0;
+  }
+}
+@media screen and (min-width: 32em) {
+  .singular-wrapper {
+    overflow-y: hidden;
   }
 }

@@ -60,10 +60,8 @@ body { height: 100%; position: relative; }
 }
 
 .singular {
-  max-height: 99%;
-  max-height: 99vh;
+  max-height: 100%;
   padding: 1em 0;
-  padding: 3vh 0;
   display: inline-block;
   @include box-sizing(border-box);
   white-space: normal;
@@ -98,6 +96,7 @@ body { height: 100%; position: relative; }
 }
 
 @media screen and (max-width: 32em) {
+  html { min-width: auto !important; }
   .singular.narrow-collapse {
     max-height: none !important;
     width: auto !important;
@@ -111,4 +110,8 @@ body { height: 100%; position: relative; }
       border-right: 0;
     }
   }
+}
+
+@media screen and (min-width: 32em) {
+  .singular-wrapper { overflow-y: hidden; }
 }
