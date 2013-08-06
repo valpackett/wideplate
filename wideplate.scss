@@ -2,10 +2,10 @@
  * WIDEPLATE -- https://github.com/myfreeweb/wideplate
  */
 
-$singular-column-width: 22em;
-$plural-column-max-width: 24em;
-$column-rule: 1px dotted #ccc;
-$column-gap: 1px;
+$singular-column-width: 22em !default;
+$plural-column-max-width: 24em !default;
+$column-rule: 1px dotted #ccc !default;
+$column-gap: 1px !default;
 
 @mixin column-width($w) {
   -webkit-column-width: $w;
